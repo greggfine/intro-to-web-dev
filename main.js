@@ -1,6 +1,6 @@
-const userInput = document.querySelector("input");
-const userName = document.querySelector(".user-name");
+var userInput = document.getElementById("user-input");
+var userName = document.getElementById("user-name");
 
-userInput.addEventListener('keyup', (e) => { 
-    userName.textContent = e.target.value;
+userInput.addEventListener('keyup', (event) => { 
+    userName.textContent = event.target.value;
 })

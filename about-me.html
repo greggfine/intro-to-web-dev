@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+  <head>
+    <title>About Me</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        background-color: #ebedef;
+        transition: all 2s linear;
+      }
+
+      body {
+        max-width: 500px;
+        background-color: white;
+        margin: 0 auto;
+        font-family: Helvetica;
+        text-align: center;
+        margin-top: 100px;
+        padding: 20px;
+        transition: all 2s linear;
+      }
+
+      .main {
+        border-top: 2px solid #ccc;
+      }
+
+      img {
+        width: 200px;
+      }
+
+      h1 {
+        margin: 30px 0;
+      }
+
+      li {
+        list-style: none;
+        margin-top: 20px;
+      }
+
+      .has-shadow {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+      }
+
+      html.dark-mode,
+      html.dark-mode body {
+        background-color: #282c35;
+        color: hsla(0, 0%, 100%, 0.88);
+      }
+
+      html.dark-mode h1 {
+        color: #ffa7c4;
+      }
+
+      html.dark-mode .has-shadow {
+        box-shadow: 0 14px 28px rgba(255, 255, 255, 0.26),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+      }
+
+      html.dark-mode .main {
+        border-top: 2px solid hsla(0, 0%, 100%, 0.88);
+      }
+    </style>
+  </head>
+  <body class="has-shadow">
+    <div class="header">
+      <img src="grey bzine.jpg" alt="Photo of Grey Bzine" class="has-shadow" />
+      <h1>Hey, I'm Grey!</h1>
+    </div>
+
+    <div class="main">
+      <ul>
+        <li>HTML for content!</li>
+        <li>CSS for styling!</li>
+        <li id="js-message">JavaScript for functionality!</li>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    var jsMessageElement = document.getElementById('js-message');
+    var jsMessage = 'JavaScript for functionality!';
+    var typingSpeed = 100;
+
+    var i = 1;
+
+    setInterval(() => {
+      jsMessageElement.innerHTML = jsMessage.slice(0, i);
+
+      if (i === jsMessage.length) {
+        i = 1;
+      } else {
+        i++;
+      }
+    }, typingSpeed);
+  </script>
+</html>

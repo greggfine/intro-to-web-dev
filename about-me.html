@@ -83,11 +83,11 @@
   </body>
 
   <script>
-    const jsMessageElement = document.getElementById('js-message');
-    const jsMessage = 'JavaScript for functionality!';
-    const typingSpeed = 100;
+    var jsMessageElement = document.getElementById('js-message');
+    var jsMessage = 'JavaScript for functionality!';
+    var typingSpeed = 100;
 
-    let i = 1;
+    var i = 1;
 
     setInterval(() => {
       jsMessageElement.innerHTML = jsMessage.slice(0, i);
